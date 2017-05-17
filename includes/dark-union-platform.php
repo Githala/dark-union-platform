@@ -12,7 +12,7 @@ class Dark_Union_Platform {
     function dark_union_menu() {
         
     }
-
+    
     public function __construct(){
         add_action('admin_menu', array($this,'dark_union_menu'));
 
@@ -23,6 +23,5 @@ class Dark_Union_Platform {
 		// $this->define_admin_hooks();
 		// $this->define_public_hooks();
     }
-
 }
 ?>
