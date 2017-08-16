@@ -34,7 +34,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/EventsController.php';
 register_activation_hook( __FILE__, 'activate_dark_union_platform' );
 register_deactivation_hook( __FILE__, 'deactivate_dark_union_platform' );
 
+include_once plugin_dir_path( __FILE__ ).'shortcodes.php';
+
 add_action( 'admin_menu', 'add_dark_union_menu');
+//add_action('init', 'create_shortcodes');
 add_action( 'rest_api_init', function () {
 	$eventController = new EventsController();
 	$eventController->register_routes();
@@ -62,3 +65,19 @@ function add_cap() {
 	}
 }
 
+// function dark_union_platform_install () {
+//     global $wpdb;
+
+//     $table_name = $wpdb->prefix . "duks";
+
+//     $sql = "CREATE TABLE $table_name (
+//         id mediumint(9) NOT NULL AUTO_INCREMENT,
+//         userid mediumint(9) NOT NULL,
+//         race varchar(50) NOT NULL,
+//         classid mediumint(9) NOT NULL,
+//         PRIMARY KEY  (id)
+//     ) $charset_collate;";
+
+//     require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+//     dbDelta( $sql );
+// }
