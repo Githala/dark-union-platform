@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Plugin Dark Union</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12"><!-- knoppen menu -->
+            <button id="account">Account</button>
+            <button id="bestellingen">Bestellingen</button>
+            <button id="ic-gegevens">DUK en Achtergrond</button>
+            <button id="faq">Vragen en uploads</button>
+        </div>
+        <!-- linker kolom -->
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <h4>Ras</h4>
+            <div id="ras" class="box">Vampier</div>
+            <h4>Hierarchy</h4>
+            <div id="hierarchy" class="box"></div>
+            <h4>Geloof</h4>
+            <div id="geloof" class="box"></div>
+            <h4>Doorzichtige Kristallen</h4>
+            <div id="d-kristal" class="box"></div>
+        </div>
+        <!-- rechter kolom -->
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <h4>Klasse</h4>
+            <div id="klasse" class="box">Rogue</div>
+            <h4>Herkomst</h4>
+            <div id="herkomst" class="box"></div>
+            <h4>Element</h4>
+            <div id="element" class="box"></div>
+            <h4>Zwarte Kristallen</h4>
+            <div id="z-kristal" class="box"></div>
+        </div>
+        <!-- linker kolom hp -->
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <h4>HP</h4>
+            <div id="hp" class="box">4</div>
+        </div>
+         <!-- middelste kolom ap -->
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <h4>AP</h4>
+            <div id="ap" class="box">4</div>
+        </div>
+         <!-- rechter kolom mp -->
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <h4>MP</h4>
+            <div id="mp" class="box">4</div>
+        </div>
+        <!-- evenement gegevens linker kolom -->
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <h4>Evenement</h4>
+            <div id="evenement" class="grow-box">Live 1</div>
+        </div>
+        <!-- evenement gegevens rechter kolom -->
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <h4>EP</h4>
+            <div id="ep" class="grow-box">6 EP</div>
+        </div>
+        <!-- linker kolom EP -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>EP ontvangen</h4>
+            <div id="ep-ontvangen" class="box"></div>
+        </div>
+        <!-- middelste kolom EP -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>EP besteed</h4>
+            <div id="ep-besteed" class="box"></div>
+        </div>
+        <!-- rechter kolom EP -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>EP onbesteed</h4>
+            <div id="ep-onbesteed" class="box"></div>
+        </div>
+        <!-- hierarchy vaardigheden -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="heading">Hierarchy vaardigheden</div>
+        </div>
+         <!-- linker kolom hierarchy -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Naam</h4>
+            <div id="naam-hierarchy" class="grow-box"></div>
+        </div>
+        <!-- middelste kolom hierarchy -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>EP</h4>
+            <div id="ep-hierarchy" class="grow-box"></div>
+        </div>
+        <!-- rechter kolom hierarchy -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Aantal</h4>
+            <div id="aantal-hierarchy" class="grow-box"></div>
+        </div>
+
+         <!-- vaardigheden gewoon -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="heading">Vaardigheden</div>
+        </div>
+         <!-- linker kolom gewone vaardigheden -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Naam</h4>
+            <div id="naam-vaardigheid" class="grow-box"></div>
+        </div>
+        <!-- middelste kolom gewone vaardigheden -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Soort</h4>
+            <div id="soort-vaardigheid" class="grow-box"></div>
+        </div>
+        <!-- rechter kolom gewone vaardigheden -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>EP</h4>
+            <div id="ep-vaardigheid" class="grow-box"></div>
+        </div>
+
+        <!-- spreuken -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="heading">Spreuken</div>
+        </div>
+         <!-- linker kolom spreuken -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Naam</h4>
+            <div id="naam-spreuken" class="grow-box"></div>
+        </div>
+        <!-- middelste kolom spreuken -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Level</h4>
+            <div id="level-spreuken" class="grow-box"></div>
+        </div>
+        <!-- rechter kolom spreuken -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>EP</h4>
+            <div id="ep-spreuken" class="grow-box"></div>
+        </div>
+        
+        <!-- Leermeester -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="heading">Leermeester</div>
+        </div>
+         <!-- linker kolom leermeester -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Leermeester van</h4>
+            <div id="naam-leermeester" class="grow-box"></div>
+        </div>
+        <!-- middelste kolom leermeester -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Vaardigheid</h4>
+            <div id="vaardigheid-leermeester" class="grow-box"></div>
+        </div>
+        <!-- rechter kolom leermeester -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Afgerond</h4>
+            <div id="afgerond-leermeester" class="grow-box"></div>
+        </div>
+
+        <!-- Leerling -->
+        <!-- linker kolom leerling -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Leerling van</h4>
+            <div id="naam-leerling" class="grow-box"></div>
+        </div>
+        <!-- middelste kolom leerling -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Vaardigheid</h4>
+            <div id="vaardigheid-leerling" class="grow-box"></div>
+        </div>
+        <!-- rechter kolom leerling -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Afgerond</h4>
+            <div id="afgerond-leerling" class="grow-box"></div>
+        </div>
+        <!-- bezittingen -->
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <h4>Bezittingen</h4>
+            <div id="bezittingen" class="grow-box"></div>
+        </div>
+        <!-- opmerkingen -->
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <h4>Opmerkingen</h4>
+            <div id="opmerkingen" class="grow-box"></div>
+        </div>
+
+        <!-- achtergrond -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="heading">Achtergrond</div>
+            <div id="achtergrond" class="grow-box"></div>
+        </div>
+	</div>
+
+<div>
+	<!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+   crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
