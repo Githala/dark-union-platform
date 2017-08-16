@@ -30,11 +30,12 @@ if ( ! defined( 'WPINC' ) ) {
 //}
 // Where the magic happens...
 require plugin_dir_path( __FILE__ ) . 'includes/EventsController.php';
+//include_once plugin_dir_path( __FILE__ ).'shortcodes.php';
 
 register_activation_hook( __FILE__, 'activate_dark_union_platform' );
 register_deactivation_hook( __FILE__, 'deactivate_dark_union_platform' );
 
-include_once plugin_dir_path( __FILE__ ).'shortcodes.php';
+
 
 add_action( 'admin_menu', 'add_dark_union_menu');
 //add_action('init', 'create_shortcodes');
@@ -50,6 +51,8 @@ function add_dark_union_menu() {
 
 function activate_dark_union_platform() {
 	add_cap();
+	$eventsRepository = new EventRepository();
+	$eventsRepository->create_table();
 }
 
 function deactivate_dark_union_platform() {
@@ -64,6 +67,23 @@ function add_cap() {
 		}
 	}
 }
+
+//function create_events_table() {
+//	global $wpdb;
+//
+//	$table_name = $wpdb->prefix . "events";
+//	$charset_collate = $wpdb->get_charset_collate();
+//
+//	$sql = "CREATE TABLE $table_name (
+//        id mediumint(9) NOT NULL AUTO_INCREMENT,
+//        name varchar(50) NOT NULL,
+//        ep smallint(5) NOT NULL,
+//        PRIMARY KEY  (id)
+//    ) $charset_collate;";
+//
+//	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+//	dbDelta( $sql );
+//}
 
 // function dark_union_platform_install () {
 //     global $wpdb;
