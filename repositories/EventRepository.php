@@ -33,11 +33,14 @@ class EventRepository {
 		);
 
 		$row = $this->db->get_row( $query);
-		return new Event($row->id, $row->name, $row->ep);
+		return $this->to_event($row);
 	}
 
 	function getAllEvents() {
-		return $this->events;
+		$query = "SELECT * FROM $this->table_name";
+		$results = $this->db->get_results($query);
+
+		return array_map(array($this, "to_event"), $results);
 	}
 
 	function create_table() {
@@ -55,5 +58,9 @@ class EventRepository {
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
+	}
+
+	private function to_event($row) {
+		return new Event($row->id, $row->name, $row->ep);
 	}
 }
