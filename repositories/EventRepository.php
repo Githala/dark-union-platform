@@ -15,8 +15,8 @@ class EventRepository {
 
 	function __construct() {
 		$this->events = array(
-			new Event(1,"Live 1", 6),
-			new Event(2,"Baravond 1", 3)
+			1 => new Event(1,"Live 1", 6),
+			2 => new Event(2,"Baravond 1", 3)
 		);
 	}
 
